@@ -10,6 +10,7 @@ export class BusinessNewsComponent implements OnInit {
   constructor(private _services: NewsApiServicesService) {}
   businessIcerik: any = [];
   pageBusiness: number = 1;
+  term = '';
 
   ngOnInit(): void {
     this._services.businessNews().subscribe((res) => {

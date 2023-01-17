@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
 
   headerIcerik: any = [];
   pageHeader: number = 1;
+  searchText: any;
 
   ngOnInit(): void {
     this._services.header().subscribe((res) => {

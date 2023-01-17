@@ -10,6 +10,7 @@ export class EntertainmentComponent implements OnInit {
   constructor(private _services: NewsApiServicesService) {}
   entertainmentIcerik: any = [];
   pageEntertainment: number = 1;
+  term = '';
 
   ngOnInit(): void {
     this._services.entertainmentNews().subscribe((res) => {

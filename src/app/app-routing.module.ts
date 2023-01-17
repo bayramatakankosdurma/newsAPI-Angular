@@ -8,6 +8,7 @@ import { HealthNewsComponent } from './health-news/health-news.component';
 import { ScienceNewsComponent } from './science-news/science-news.component';
 import { TechnologyNewsComponent } from './technology-news/technology-news.component';
 import { HakkimdaComponent } from './hakkimda/hakkimda.component';
+import { SearchPageComponent } from './search-page/search-page.component';
 
 const routes: Routes = [
   { path: '', component: HeaderComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'science', component: ScienceNewsComponent },
   { path: 'technology', component: TechnologyNewsComponent },
   { path: 'hakkimda', component: HakkimdaComponent },
+  { path: 'search', component: SearchPageComponent },
 ];
 
 @NgModule({

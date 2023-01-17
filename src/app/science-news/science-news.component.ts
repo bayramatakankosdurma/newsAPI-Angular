@@ -10,6 +10,7 @@ export class ScienceNewsComponent implements OnInit {
   constructor(private _services: NewsApiServicesService) {}
   scienceIcerik: any = [];
   pageScience: number = 1;
+  term = '';
 
   ngOnInit(): void {
     this._services.scienceNews().subscribe((res) => {

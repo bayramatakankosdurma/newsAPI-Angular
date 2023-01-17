@@ -1,7 +1,7 @@
 <div class="container mt-5">
-  <h3>Home</h3>
+  <h3>{{ searchText }}</h3>
   <ngb-carousel style="width: 50%; margin: auto">
-    <ng-template ngbSlide *ngFor="let haber of headerIcerik.slice(0, 3)">
+    <ng-template ngbSlide *ngFor="let haber of searchIcerik.slice(0, 3)">
       <a href="{{ haber.url }}" target="_blank">
         <div class="picsum-img-wrapper">
           <img [src]="haber.urlToImage" alt="Random first slide" width="100%" />
@@ -14,15 +14,15 @@
       </a>
     </ng-template>
   </ngb-carousel>
-
   <div class="row">
     <div
       *ngFor="
-        let haber of headerIcerik.slice(3)
+        let haber of searchIcerik.slice(3)
+          | filter : term
           | paginate
             : {
                 itemsPerPage: 20,
-                currentPage: pageHeader
+                currentPage: pageSearch
               }
       "
       class="col-lg-3 mt-4"

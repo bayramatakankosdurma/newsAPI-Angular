@@ -10,6 +10,7 @@ export class HealthNewsComponent implements OnInit {
   constructor(private _services: NewsApiServicesService) {}
   healthIcerik: any = [];
   pageHealth: number = 1;
+  term = '';
 
   ngOnInit(): void {
     this._services.healthNews().subscribe((res) => {

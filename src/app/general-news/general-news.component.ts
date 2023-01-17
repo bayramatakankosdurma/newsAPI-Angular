@@ -10,6 +10,7 @@ export class GeneralNewsComponent implements OnInit {
   constructor(private _services: NewsApiServicesService) {}
   generalIcerik: any = [];
   pageGeneral: number = 1;
+  term = '';
 
   ngOnInit(): void {
     this._services.generalNews().subscribe((res) => {

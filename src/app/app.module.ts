@@ -14,14 +14,32 @@ import { HealthNewsComponent } from './health-news/health-news.component';
 import { ScienceNewsComponent } from './science-news/science-news.component';
 import { TechnologyNewsComponent } from './technology-news/technology-news.component';
 import { HakkimdaComponent } from './hakkimda/hakkimda.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { SearchPageComponent } from './search-page/search-page.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, BusinessNewsComponent, EntertainmentComponent, GeneralNewsComponent, HealthNewsComponent, ScienceNewsComponent, TechnologyNewsComponent, HakkimdaComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    BusinessNewsComponent,
+    EntertainmentComponent,
+    GeneralNewsComponent,
+    HealthNewsComponent,
+    ScienceNewsComponent,
+    TechnologyNewsComponent,
+    HakkimdaComponent,
+    SearchPageComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgxPaginationModule,
+    Ng2SearchPipeModule,
+    FormsModule,
+    NgbCarouselModule,
   ],
   providers: [NewsApiServicesService],
   bootstrap: [AppComponent],
