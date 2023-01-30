@@ -1,19 +1,5 @@
 <div class="container mt-5">
-  <h3>{{ searchText }}</h3>
-  <ngb-carousel style="width: 50%; margin: auto">
-    <ng-template ngbSlide *ngFor="let haber of searchIcerik.slice(0, 3)">
-      <a href="{{ haber.url }}" target="_blank">
-        <div class="picsum-img-wrapper">
-          <img [src]="haber.urlToImage" alt="Random first slide" width="100%" />
-        </div>
-        <div class="carousel-caption">
-          <h5 class="mt-2 mb-2" style="font-size: 17px; font-weight: 600">
-            {{ haber.title }}
-          </h5>
-        </div>
-      </a>
-    </ng-template>
-  </ngb-carousel>
+  <h3>Aranan Kelime : "{{ term }}"</h3>
   <div class="row">
     <div
       *ngFor="

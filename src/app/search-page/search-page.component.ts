@@ -20,12 +20,11 @@ export class SearchPageComponent implements OnInit {
   queryParam: any;
 
   ngOnInit() {
-    this.searchText = this.activatedRoute.params['searchText'];
-    this.term = this.searchText;
-    this._services.header().subscribe((res) => {
-      console.log(res);
-      this.searchIcerik = res.articles;
-      console.log(this.searchIcerik);
+    this.activatedRoute.params.subscribe((params) => {
+      this.term = params['searchText'];
+      this._services.header().subscribe((res) => {
+        this.searchIcerik = res.articles;
+      });
     });
   }
 
