@@ -1,5 +1,16 @@
 # NewsAPI
 
+#TO RUN APP FIRST YOU SHOULD DO THESE
+
+1) Download Node.js
+2) Open a terminal in project file
+3) npm install -g @angular/cli
+4) npm install -g ngx
+5) npm i ng2-search-filter --save
+6) ng add @ng-bootstrap/ng-bootstrap
+7) npm install ngx-pagination --save
+8) ng serve/ ng s
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
 
 ## Development server
